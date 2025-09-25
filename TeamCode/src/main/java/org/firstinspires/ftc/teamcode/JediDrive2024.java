@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 import org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles;
 
-@TeleOp(name = "JediDrive")
+@TeleOp(name = "JediDrive2024")
 public class JediDrive2024 extends LinearOpMode {
 
     private DcMotor FrontLeft;
@@ -235,10 +235,10 @@ public class JediDrive2024 extends LinearOpMode {
                     x = r * Math.cos(Math.toRadians(theta));
                     y = r * Math.sin(Math.toRadians(theta));
 
-                    FrontLeft.setPower(Power * (-gamepad1.right_stick_x + (y - x)));
-                    BackLeft.setPower(Power * (-gamepad1.right_stick_x + y + x));
-                    FrontRight.setPower(-(Power * (gamepad1.right_stick_x + y + x)));
-                    BackRight.setPower(-(Power * (gamepad1.right_stick_x + (y - x))));
+                    FrontLeft.setPower(Power * (gamepad1.right_stick_x + (y - x)));
+                    BackLeft.setPower(Power * (gamepad1.right_stick_x + y + x));
+                    FrontRight.setPower(-(Power * (-gamepad1.right_stick_x + y + x)));
+                    BackRight.setPower(-(Power * (-gamepad1.right_stick_x + (y - x))));
 
                     /* if (gamepad1.dpad_down) {
                         FrontLeft.setPower(Power * 1);
